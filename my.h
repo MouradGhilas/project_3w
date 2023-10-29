@@ -3,17 +3,27 @@
 
 #include <ChainableLED.h>
 
+
 // Définition de la structure avec typedef
 typedef struct {
-  int state_mod_colors;
+  bool GREEN;
+  bool YELLOW;
+  bool BLUE;
+  bool ORANGE;
 } etat_t;
 
 // Déclaration de la fonction pour initialiser la structure
 void initCouleurStruct(etat_t* couleur_s);
 
 // Ajout de la déclaration de la fonction changerCouleur
-void change_mode(int bouton, etat_t* couleur_s);
-void change_maint(int color, etat_t* couleur_s);
-void mode_maint(int color, etat_t* couleur_s);
+void function_led_colors(etat_t* couleur_s);
 
+int mode_stand(int bouton, etat_t* couleur_s);
+int mode_config(int bouton, etat_t* couleur_s);
+int mode_eco(int color, etat_t* couleur_s);
+int from_eco_to_stand(int color, etat_t* couleur_s);
+
+void led_verte();
+void led_jaune();
+void led_bleu();
 #endif // MY_H
