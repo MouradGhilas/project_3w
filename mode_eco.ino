@@ -19,15 +19,7 @@ int mode_eco(int color, etat_t* couleur_s) {
       couleur_s->GREEN = false;
       couleur_s->ORANGE = false;
     }
-  } else {
-    // Gestion d'erreur si le bouton n'a pas été pressé pendant exactement 5 secondes
-    Serial.print("Erreur : Le bouton ");
-    Serial.print((color == bouton_vert) ? "vert" : "rouge");
-    Serial.println(" n'a pas été pressé pendant 5 secondes.");
-
-    return -1;
   }
-  // Détache l'interruption pour éviter d'être rappelé
   return 0;
 }
 
@@ -50,13 +42,6 @@ int from_eco_to_stand(int color, etat_t* couleur_s) {
       couleur_s->YELLOW = false;
       couleur_s->ORANGE = false;
     }
-  } else {
-    // Gestion d'erreur si le bouton n'a pas été pressé pendant exactement 5 secondes
-    Serial.print("Erreur : Le bouton ");
-    Serial.print((color == bouton_vert) ? "vert" : "rouge");
-    Serial.println(" n'a pas été pressé pendant 5 secondes.");
-
-    return -1;
   }
   // Détache l'interruption pour éviter d'être rappelé
   return 0;

@@ -7,4 +7,3 @@ void initCouleurStruct(etat_t* couleur_s) {
   couleur_s->BLUE = false;
   couleur_s->ORANGE = false;
 }
-

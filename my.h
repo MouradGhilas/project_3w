@@ -22,8 +22,12 @@ int mode_stand(int bouton, etat_t* couleur_s);
 int mode_config(int bouton, etat_t* couleur_s);
 int mode_eco(int color, etat_t* couleur_s);
 int from_eco_to_stand(int color, etat_t* couleur_s);
+int mode_maint(int color, etat_t* couleur_s);
+int mode_precedent_maint(int bouton, etat_t* couleur_s);
 
 void led_verte();
 void led_jaune();
 void led_bleu();
+void led_orange();
+
 #endif // MY_H
